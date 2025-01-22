@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidebar -->
+  <mat-sidenav
+    *ngIf="showNavbar"
+    #drawer
+    mode="side"
+    class="sidenav"
+    [opened]="false"
+  >
+    <mat-toolbar color="primary">Menú</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">Home</a>
+      <a mat-list-item routerLink="/create-client">Crear Cliente</a>
+      <a mat-list-item routerLink="/list-client">Listar Clientes</a>
+      <a mat-list-item routerLink="/statistics">Estadísticas</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+    <mat-toolbar *ngIf="showNavbar" color="primary">
+      <button mat-icon-button (click)="toggleDrawer()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="title">Clientify</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

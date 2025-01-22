@@ -1,0 +1,110 @@
+.create-client-container {
+  color: black;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px; /* Ajusta el ancho para las dos columnas */
+  margin: 50px auto;
+  background: white; /* Fondo blanco para contraste */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el contenedor */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.create-client-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  gap: 1rem 2rem; /* Espaciado entre filas y columnas */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333; /* Color más oscuro para mejor contraste */
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+label:hover {
+  color: #2575fc; /* Cambia el color al pasar el mouse */
+}
+
+input {
+  padding: 0.8rem; /* Ajusta el padding para inputs más estilizados */
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none; /* Elimina el borde azul predeterminado */
+}
+
+input:focus {
+  border-color: #2575fc; /* Cambia el borde al color primario */
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5); /* Agrega un brillo sutil */
+}
+
+input:hover {
+  border-color: #6a11cb; /* Cambia ligeramente el color al pasar el mouse */
+}
+
+input::placeholder {
+  color: #aaa;
+  font-style: italic; /* Placeholder con estilo tenue */
+}
+
+.submit-btn {
+  grid-column: span 2; /* Hace que el botón ocupe todo el ancho */
+  padding: 0.8rem 2rem;
+  background: linear-gradient(
+    to right,
+    #2575fc,
+    #6a11cb
+  ); /* Degradado moderno */
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05); /* Crece ligeramente */
+  box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3); /* Sombra más pronunciada */
+}
+
+.notification {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  grid-column: span 2; /* Hace que la notificación ocupe todo el ancho */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.notification.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.notification.error {
+  background-color: #f44336;
+  color: white;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

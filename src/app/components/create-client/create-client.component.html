@@ -1,0 +1,55 @@
+<div class="create-client-container">
+  <header class="header">
+    <h1>Crear Cliente</h1>
+    <p>Agrega nuevos clientes a tu sistema de manera rápida y fácil.</p>
+  </header>
+
+  <form (ngSubmit)="onSubmit()" class="create-client-form">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        id="nombre"
+        [(ngModel)]="client.nombre"
+        name="nombre"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label>
+      <input
+        type="text"
+        id="apellido"
+        [(ngModel)]="client.apellido"
+        name="apellido"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="edad">Edad:</label>
+      <input
+        type="number"
+        id="edad"
+        [(ngModel)]="client.edad"
+        name="edad"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+      <input
+        type="date"
+        id="fechaNacimiento"
+        [(ngModel)]="client.fechaNacimiento"
+        name="fechaNacimiento"
+        required
+      />
+    </div>
+    <button type="submit" class="submit-btn">Crear Cliente</button>
+  </form>
+
+  <!-- Notificación -->
+  <div *ngIf="notification" class="notification" [ngClass]="notification.type">
+    {{ notification.message }}
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="home-container">
+  <header class="home-header">
+    <h1>Bienvenido a Gestión de Clientes</h1>
+    <p>
+      Administra clientes, visualiza estadísticas y más, todo en un solo lugar.
+    </p>
+  </header>
+
+  <div class="home-actions">
+    <div class="action-card" (click)="navigateTo('create-client')">
+      <h3>Crear Cliente</h3>
+      <p>Agrega nuevos clientes a tu sistema.</p>
+    </div>
+
+    <div class="action-card" (click)="navigateTo('list-client')">
+      <h3>Lista de Clientes</h3>
+      <p>Consulta, edita o elimina registros existentes.</p>
+    </div>
+
+    <div class="action-card" (click)="navigateTo('statistics')">
+      <h3>Estadísticas</h3>
+      <p>Obtén datos clave sobre tus clientes.</p>
+    </div>
+  </div>
+</div>

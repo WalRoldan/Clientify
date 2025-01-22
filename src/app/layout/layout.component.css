@@ -1,0 +1,16 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  padding: 16px;
+}
+
+.title {
+  margin-left: 16px;
+}
