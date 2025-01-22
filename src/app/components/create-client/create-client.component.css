@@ -2,10 +2,10 @@
   color: black;
   padding: 2rem;
   border-radius: 8px;
-  max-width: 600px; /* Ajusta el ancho para las dos columnas */
+  max-width: 600px;
   margin: 50px auto;
-  background: white; /* Fondo blanco para contraste */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el contenedor */
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -15,8 +15,8 @@
 
 .create-client-form {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-  gap: 1rem 2rem; /* Espaciado entre filas y columnas */
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
 }
 
 .form-group {
@@ -27,57 +27,53 @@
 label {
   font-size: 1rem;
   font-weight: bold;
-  color: #333; /* Color más oscuro para mejor contraste */
+  color: #333;
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
 
 label:hover {
-  color: #2575fc; /* Cambia el color al pasar el mouse */
+  color: #2575fc;
 }
 
 input {
-  padding: 0.8rem; /* Ajusta el padding para inputs más estilizados */
+  padding: 0.8rem;
   border: 2px solid #ccc;
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  outline: none; /* Elimina el borde azul predeterminado */
+  outline: none;
 }
 
 input:focus {
-  border-color: #2575fc; /* Cambia el borde al color primario */
-  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5); /* Agrega un brillo sutil */
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
 }
 
 input:hover {
-  border-color: #6a11cb; /* Cambia ligeramente el color al pasar el mouse */
+  border-color: #6a11cb;
 }
 
 input::placeholder {
   color: #aaa;
-  font-style: italic; /* Placeholder con estilo tenue */
+  font-style: italic;
 }
 
 .submit-btn {
-  grid-column: span 2; /* Hace que el botón ocupe todo el ancho */
+  grid-column: span 2;
   padding: 0.8rem 2rem;
-  background: linear-gradient(
-    to right,
-    #2575fc,
-    #6a11cb
-  ); /* Degradado moderno */
+  background: linear-gradient(to right, #2575fc, #6a11cb);
   color: white;
   font-size: 1.1rem;
   border: none;
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .submit-btn:hover {
-  transform: scale(1.05); /* Crece ligeramente */
-  box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3); /* Sombra más pronunciada */
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(106, 17, 203, 0.3);
 }
 
 .notification {
@@ -86,7 +82,7 @@ input::placeholder {
   margin-top: 1rem;
   font-size: 1rem;
   text-align: center;
-  grid-column: span 2; /* Hace que la notificación ocupe todo el ancho */
+  grid-column: span 2;
   opacity: 0;
   transform: translateY(-10px);
   animation: fadeIn 0.3s ease forwards;

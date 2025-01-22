@@ -26,13 +26,8 @@ export class ClientListComponent implements OnInit {
     this.loadClients();
   }
   formatDate(dateString: string): string {
-    // Definir la zona horaria
-    const timeZone = 'America/Argentina/Buenos_Aires'; // Cambia esta zona horaria según tu ubicación
-
-    // Convertir la fecha a la zona horaria correcta
+    const timeZone = 'America/Argentina/Buenos_Aires';
     const zonedDate = toZonedTime(dateString, timeZone);
-
-    // Formatear la fecha con el formato deseado
     return format(zonedDate, "d 'de' MMMM 'de' yyyy", {
       locale: es,
     });
@@ -63,7 +58,7 @@ export class ClientListComponent implements OnInit {
   openEditModal(client: any) {
     this.clientToEdit = {
       ...client,
-      fechaNacimiento: client.fechaNacimiento.split('T')[0], // Formato 'YYYY-MM-DD'
+      fechaNacimiento: client.fechaNacimiento.split('T')[0],
     };
     console.log('clientToEdit', this.clientToEdit);
     this.showEditModal = true;

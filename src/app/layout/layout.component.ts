@@ -1,26 +1,3 @@
-// import { Component } from '@angular/core';
-// import { MatSidenavModule } from '@angular/material/sidenav';
-// import { MatToolbarModule } from '@angular/material/toolbar';
-// import { MatButtonModule } from '@angular/material/button';
-// import { MatIconModule } from '@angular/material/icon';
-// import { MatListModule } from '@angular/material/list';
-// import { RouterModule } from '@angular/router';
-
-// @Component({
-//   selector: 'app-layout',
-//   templateUrl: './layout.component.html',
-//   styleUrls: ['./layout.component.css'],
-//   standalone: true,
-//   imports: [
-//     MatSidenavModule,
-//     MatToolbarModule,
-//     MatButtonModule,
-//     MatIconModule,
-//     MatListModule,
-//     RouterModule, // Necesario para routerLink
-//   ],
-// })
-// export class LayoutComponent {}
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router, RouterModule } from '@angular/router';
@@ -47,7 +24,7 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export class LayoutComponent {
-  @ViewChild('drawer') drawer!: MatSidenav; // Obtiene la referencia al mat-sidenav
+  @ViewChild('drawer') drawer!: MatSidenav;
 
   showNavbar = true;
 
@@ -58,6 +35,6 @@ export class LayoutComponent {
   }
 
   toggleDrawer() {
-    this.drawer.toggle(); // Abre o cierra el menú lateral
+    this.drawer.toggle();
   }
 }

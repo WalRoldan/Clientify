@@ -9,11 +9,10 @@ import annotationPlugin from 'chartjs-plugin-annotation';
   styleUrls: ['./statistics.component.css'],
 })
 export class StatisticsComponent implements OnInit {
-  stats: any = { promedioEdad: 0, desviacionEstandar: 0 }; // Valores iniciales
+  stats: any = { promedioEdad: 0, desviacionEstandar: 0 };
   chart: any;
 
   constructor(private clientService: ClientService) {
-    // Registra el plugin de anotaciones
     Chart.register(annotationPlugin);
   }
 
@@ -46,7 +45,7 @@ export class StatisticsComponent implements OnInit {
   createChart() {
     const ctx = document.getElementById('ageChart') as HTMLCanvasElement;
     if (this.chart) {
-      this.chart.destroy(); // Elimina el gráfico anterior si existe
+      this.chart.destroy();
     }
     this.chart = new Chart(ctx, {
       type: 'bar',
@@ -72,8 +71,8 @@ export class StatisticsComponent implements OnInit {
             annotations: {
               referenceLine: {
                 type: 'line',
-                yMin: 80, // Valor de referencia
-                yMax: 80, // La línea es horizontal, misma coordenada en y
+                yMin: 80,
+                yMax: 80,
                 borderColor: 'red',
                 borderWidth: 2,
                 label: {
